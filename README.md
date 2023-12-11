@@ -148,7 +148,7 @@ to fix these error use : `lint:fix: "npx eslint src --fix"` or `"lint:fix": "npx
 
 #### step 5: eslint rule setup ->
 
-inclue these rules and for `no-undef : error" 
+inclue these rules in eslintrc.json and for `no-undef : error" 
 in the rules use 
 "globals": {
 "process": "readonly"
@@ -244,7 +244,7 @@ and make a script to formate code in package.json : `   "prettier": "prettier --
 2. make a script in package.json for formate code : `"prettier:fix": "npx prettier --write src",`
    `Setup done`
 
-#### step-9:
+## step-9:
 
 make a .gitignore file
 past them into .gitgonre file these
@@ -252,3 +252,22 @@ past them into .gitgonre file these
 dist
 .env
 `
+
+## step-10
+
+install ts-node-dev `npm i ts-node-dev --save-dev`
+ts-node-dev --respawn --transpile-only server.ts
+
+#### step 2: add these script in package.json file
+
+    "start:prod": "node ./dist/server.js",
+    "start:dev": "ts-node-dev --respawn --transpile-only ./src/server.ts",
+
+## step-11
+
+when development time use`NODE_ENV = development`
+and when is production time use `NODE_ENV = production`
+
+# Main software
+
+## modular design pattern
